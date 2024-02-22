@@ -2,7 +2,8 @@
 
 use Illuminate\Support\Facades\Route;
 
-Route::get('/', function () {
+use App\Http\Controllers\TypeController;
+use App\Http\Controllers\ProjectController;
 
-    return view('pages.index');
-});
+Route :: get('/', [TypeController :: class, 'index']) -> name('type.index');
+Route :: get('/projects', [ProjectController :: class, 'index']) -> name('project.index');
