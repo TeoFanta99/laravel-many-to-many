@@ -11,7 +11,7 @@ class Technology extends Model
 
     public function projects() {
 
-        return views belongsToMany(Project :: class)
+        return $this -> belongsToMany(Project :: class);
     }
-    
+
 }
