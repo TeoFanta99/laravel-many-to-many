@@ -14,4 +14,11 @@ class TypeController extends Controller
 
         return view ('pages.index', compact('types'));
     }
+
+    public function show ($id) {
+
+        $type = Type :: find($id);
+
+        return view ('pages.show', compact('type'));
+    }
 }
