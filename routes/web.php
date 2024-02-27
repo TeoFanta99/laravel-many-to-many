@@ -10,3 +10,5 @@ Route :: get ('/projects', [ProjectController :: class, 'index']) -> name('proje
 Route :: get('/types/create', [TypeController :: class, 'create']) -> name('type.create');
 Route :: post ('types', [TypeController :: class, 'store']) -> name('type.store');
 Route :: get ('/types/{id}', [TypeController :: class, 'show']) -> name ('type.show');
+Route :: get ('/types/{id}/edit', [TypeController :: class, 'edit']) -> name ('type.edit');
+Route :: put ('/types/{id}', [TypeController :: class, 'update']) -> name ('type.update');

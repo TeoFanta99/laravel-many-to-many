@@ -10,6 +10,8 @@
     {{ $type -> name }}
 </h2>
 <br>
+<img src="{{ asset('storage/' . $type -> image) }}" alt="img" width="300">
+<br>
 <button>
     <a href="{{ route('type.index') }}">BACK HOME</a>
 </button>

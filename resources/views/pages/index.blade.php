@@ -20,6 +20,9 @@
                 {{$type -> name}}
             </span>
         </a>
+        <button>
+            <a href="{{ route('type.edit', $type -> id) }}">EDIT</a>
+        </button>
     </li>
     <br>
     @endforeach
