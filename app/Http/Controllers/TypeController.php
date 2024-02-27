@@ -21,4 +21,22 @@ class TypeController extends Controller
 
         return view ('pages.show', compact('type'));
     }
+
+    public function create () {
+
+        return view ('pages.create');
+    }
+
+    public function store (Request $request) {
+
+        $data = $request -> all();
+
+        $newType = new Type ();
+
+        $newType -> name = $data['name'];
+
+        $newType -> save();
+
+        return redirect() -> route('type.show', $newType -> id);
+    }
 }

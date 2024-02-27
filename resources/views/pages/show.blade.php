@@ -9,4 +9,8 @@
     Nome del Tipo:
     {{ $type -> name }}
 </h2>
+<br>
+<button>
+    <a href="{{ route('type.index') }}">BACK HOME</a>
+</button>
 @endsection
