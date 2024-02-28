@@ -17,7 +17,8 @@ class TechnologyFactory extends Factory
     public function definition()
     {
         return [
-            'name' => fake() -> word
+            'name' => fake() -> word,
+            'image' => 'https://picsum.photos/200/200?random=' . fake() -> numberBetween(1, 100)
         ];
     }
 }
