@@ -12,9 +12,9 @@
 
     <label for="name">Name</label>
     <input type="text" name="name" id="name">
-    <br>
+    {{-- <br>
     <label for="image">Image</label>
-    <input type="file" name="image" id="image">
+    <input type="file" name="image" id="image"> --}}
     <br><br>
     <input type="submit" value="CREATE">
 
