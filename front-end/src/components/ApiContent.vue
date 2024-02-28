@@ -6,26 +6,24 @@ export default {
 
   data() {
     return {
-      types: []
+      technologies: []
     }
   },
   mounted() {
-    console.log('ciao');
 
-    axios.get('http://localhost:8000/api/v1/types')
+    axios.get('http://localhost:8000/api/v1/technology')
 
       .then(res => {
 
         const data = res.data;
-        // console.log(data);
+        console.log(data);
 
         if (data.status == 'success')
-          this.types = data.types;
+          this.technologies = data.technologies;
 
-        console.log('types: ', this.types);
+        console.log('technologies: ', this.technologies);
 
       })
-
 
       .catch(err => {
         consol.err(err);
@@ -40,10 +38,9 @@ export default {
   <h1>API CONTENT</h1>
 
   <ol>
-    <li v-for="tipo in types" :key="tipo.id">
-      <span> {{ tipo.name }} </span>
+    <li v-for="tech in technologies" :key="tech.id">
+      <span> {{ tech.name }} </span>
       <br>
-      <img :src="tipo.image" alt="immagine">
       <hr>
     </li>
   </ol>

@@ -4,9 +4,9 @@ namespace App\Http\Controllers\Api;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
-use App\Models\Type;
+use App\Models\Technology;
 
-class ApiController extends Controller
+class ApiController extends Controller 
 {
     public function getTest() {
 
@@ -16,13 +16,13 @@ class ApiController extends Controller
         ]);
     }
 
-    public function getTypes() {
+    public function getTechnologies() {
 
-        $types = Type :: all();
+        $technologies = Technology :: all();
 
         return response() -> json ([
             'status' => 'success',
-            'types' => $types,
+            'technologies' => $technologies,
         ]);
 
     }
